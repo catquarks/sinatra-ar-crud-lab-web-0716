@@ -1,0 +1,16 @@
+<h1>Edit your Post</h1>
+
+<h3>Old Post:</h3>
+<p><b><%= @post.name %>: </b><%= @post.content %></p>
+
+<br>
+
+<form action="/posts/<%= @post.id %>" method="post">
+<input id ="hidden" type="hidden" name="_method" value="patch">
+<label>New Post Subject: </label><input type="text" name="name" placeholder="<%= @post.name %>" />
+<br>
+<label>New Content:</label><br><textarea rows="8" wrap="soft" name="content" placeholder="<%= @post.content %>"></textarea>
+<br>
+<input type="submit" value="submit" />
+
+</form>

@@ -1,0 +1,12 @@
+<% @posts = Post.all %>
+
+<h1>Your Posts!</h1>
+
+<a href="/posts/new">Click here to create a new post!</a>
+
+<ul>
+<% @posts.each do |post| %>
+	<li><%= post.id %>. <b><a href="/posts/<%= post.id %>"><%= post.name %></a>: </b><%= post.content %></li>
+	<% end %>
+
+</ul>

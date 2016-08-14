@@ -1,0 +1,16 @@
+
+
+
+<h1>"<%= @deleted_post.name %>" was deleted :(</h1>
+
+<p><b>Old Content: </b><%= @deleted_post.content %></p>
+
+<p>Feeling regret? <a href="/posts/new">Create your post again!</a></p>
+
+<br>
+
+<p><a href="/posts">Click here to go back to the index</a></p>
+
+
+
+<% Post.delete(params[:id]) %>
